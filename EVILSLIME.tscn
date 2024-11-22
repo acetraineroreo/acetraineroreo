@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://7mrwq70k3xls"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1yd6w"]
+size = Vector2(249, 188)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0.169245, 0.169245, 0.169245, 1)
+offset_left = -103.0
+offset_top = -118.0
+offset_right = 105.0
+offset_bottom = -95.0
+text = "GINIMANASOAURUS SLIME
+"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1yd6w")
+
+[node name="ColorRect" type="ColorRect" parent="CollisionShape2D"]
+offset_left = -125.0
+offset_top = -94.0
+offset_right = 125.0
+offset_bottom = 94.0
+color = Color(0.560712, 1, 0.52922, 1)

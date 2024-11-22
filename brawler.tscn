@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://dscghyl2yuw23"]
+
+[ext_resource type="Script" path="res://brawler.gd" id="1_y1ul1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s8adp"]
+size = Vector2(20, 53)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_y1ul1")
+
+[node name="Label" type="Label" parent="."]
+self_modulate = Color(0.187176, 0.187176, 0.187176, 1)
+offset_left = -30.0
+offset_top = -50.0
+offset_right = 31.0
+offset_bottom = -27.0
+text = "Brawler"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_s8adp")
+
+[node name="ColorRect" type="ColorRect" parent="CollisionShape2D"]
+offset_left = -11.0
+offset_top = -27.0
+offset_right = 10.0
+offset_bottom = 27.0
+color = Color(1, 0, 0, 1)

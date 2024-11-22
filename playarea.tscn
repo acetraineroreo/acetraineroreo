@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://chvbpk6w37cqi"]
+
+[ext_resource type="PackedScene" uid="uid://7um3go3k0qa6" path="res://background.tscn" id="1_jg3g5"]
+[ext_resource type="PackedScene" uid="uid://dscghyl2yuw23" path="res://brawler.tscn" id="2_p2cf1"]
+[ext_resource type="PackedScene" uid="uid://cn78b108rdxk7" path="res://medic.tscn" id="3_db77i"]
+[ext_resource type="PackedScene" uid="uid://7mrwq70k3xls" path="res://EVILSLIME.tscn" id="4_n4m0m"]
+[ext_resource type="Script" path="res://button.gd" id="5_4sc2m"]
+
+[node name="playarea" type="Node2D"]
+
+[node name="background" parent="." instance=ExtResource("1_jg3g5")]
+
+[node name="brawler" parent="." instance=ExtResource("2_p2cf1")]
+position = Vector2(261, 419)
+script = null
+
+[node name="medic" parent="." instance=ExtResource("3_db77i")]
+position = Vector2(203, 388)
+
+[node name="EVIL SLIME" parent="." instance=ExtResource("4_n4m0m")]
+position = Vector2(897, 351)
+
+[node name="User Interface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Fight" type="Button" parent="User Interface"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 0
+offset_left = 61.0
+offset_top = 513.0
+offset_right = 203.0
+offset_bottom = 574.0
+text = "Fight"
+script = ExtResource("5_4sc2m")
+
+[node name="Items" type="Button" parent="User Interface"]
+custom_minimum_size = Vector2(100, 0)
+offset_left = 230.0
+offset_top = 514.0
+offset_right = 372.0
+offset_bottom = 575.0
+text = "Items
+"
+script = ExtResource("5_4sc2m")
